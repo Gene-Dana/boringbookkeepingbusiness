@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:boringbookkeepingbusiness/widgets/btns.dart';
-import 'package:boringbookkeepingbusiness/landing_page/mobile/widgets/mClientLogos.dart';
-import 'package:boringbookkeepingbusiness/landing_page/mobile/widgets/mFinalMessage.dart';
-import 'package:boringbookkeepingbusiness/landing_page/mobile/widgets/mFooter.dart';
-import 'package:boringbookkeepingbusiness/landing_page/mobile/widgets/mOpening.dart';
-import 'package:boringbookkeepingbusiness/landing_page/mobile/widgets/mReviewsPage.dart';
+import 'package:boringbookkeepingbusiness/landing_page/mobile_widgets/mClientLogos.dart';
+import 'package:boringbookkeepingbusiness/landing_page/mobile_widgets/mFinalMessage.dart';
+import 'package:boringbookkeepingbusiness/landing_page/mobile_widgets/mFooter.dart';
+import 'package:boringbookkeepingbusiness/landing_page/mobile_widgets/mOpening.dart';
+import 'package:boringbookkeepingbusiness/landing_page/mobile_widgets/mReviewsPage.dart';
 
-class MyMobilePage extends StatelessWidget {
-  static Page page() => MaterialPage<void>(child: MyMobilePage());
+class MobileHomePage extends StatelessWidget {
+  static Page page() => MaterialPage<void>(child: MobileHomePage());
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:review_repository/review_repository.dart';
-import 'package:boringbookkeepingbusiness/landing_page/mobile/widgets/mreviews_body.dart';
+import 'package:boringbookkeepingbusiness/landing_page/mobile_widgets/mreviews_body.dart';
 import 'package:boringbookkeepingbusiness/reviews/bloc/bloc.dart';
 
 /// {@template reviews_page}
