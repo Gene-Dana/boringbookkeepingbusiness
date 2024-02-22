@@ -33,11 +33,6 @@ class MobileServicesPage extends StatelessWidget {
                         'Accurate categorization of bank and credit card transactions to ensure your financials are always up to date.',
                   ),
                   Services(
-                    service: 'Payroll Processing',
-                    descript:
-                        'Timely and compliant payroll processing to ensure your team is paid correctly and on time.',
-                  ),
-                  Services(
                     service: 'Monthly Financial Reports',
                     descript:
                         'Regular insights into your financial health with comprehensive reports.',
@@ -90,6 +85,11 @@ class MobileServicesPage extends StatelessWidget {
                         'Project your companys cash flow to make informed business decisions.',
                   ),
                   Services(
+                    service: 'Payroll Processing',
+                    descript:
+                        'Timely and compliant payroll processing to ensure your team is paid correctly and on time.',
+                  ),
+                  Services(
                     service: 'Job Costing',
                     descript:
                         'Detailed tracking and reporting on the costs associated with specific jobs or projects.',
@@ -117,31 +117,10 @@ class MobileServicesPage extends StatelessWidget {
                 ],
               ),
             ),
-            _ServiceSection(
-              title: 'Specialized Support Services',
-              subtitle:
-                  'Expert services to support unique business needs and compliance.',
-              icon: Image.asset('icon4.png'),
-              serviceList: _ServiceList(
-                color: Colors.red,
-                services: [
-                  Services(
-                    service: 'Audit/Tax Support',
-                    descript:
-                        'Assistance during audits and tax season to ensure compliance and accuracy.',
-                  ),
-                  Services(
-                    service: 'Tax Preparation',
-                    descript:
-                        'Professional preparation of your business taxes to maximize returns and minimize liabilities.',
-                  ),
-                ],
-              ),
-            ),
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 24.0),
               child: Text(
-                  'For more detailed information on our service packages, please contact Ryan@Web-TaxPro.com or Christy@Web-TaxPro.com, or call us at (971) 708-2045.'),
+                  'For more detailed information on our service packages, please contact Ryan@Web-TaxPro.com or call us at (971) 708-2045.'),
             )
           ],
         ),
@@ -222,7 +201,7 @@ class _Second extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              'Ryan is a seasoned bookkeeping professional leading the industry with nearly two decades of unmatched accounting expertise. His career spans across an impressive array of sectors — hospitality, grocery, restaurants, and transportation — where he has masterfully handled accounts payable, accounts receivable, credit collections, and auditing. This broad and diverse background solidifies his standing as the go-to expert in adaptable and custom bookkeeping solutions.',
+              'Ryan is a seasoned bookkeeping professional leading the industry with nearly two decades of unmatched accounting expertise. His career spans across an impressive array of sectors — contractors, nonprofits, restaurants, and transportation — where he has masterfully handled accounts payable, accounts receivable, credit collections, and auditing. This broad and diverse background solidifies his standing as the go-to expert in adaptable and custom bookkeeping solutions.',
               style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   color: Colors.black,
                   fontSize: screenWidth * 0.04), // Dynamic font size
@@ -231,7 +210,7 @@ class _Second extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              'Ryan and his son enjoy and reside in Portland, Oregon',
+              'Ryan and his family enjoy and reside in Portland, Oregon',
               style: Theme.of(context)
                   .textTheme
                   .titleSmall!
