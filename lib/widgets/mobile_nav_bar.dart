@@ -1,110 +1,62 @@
 import 'package:boringbookkeepingbusiness/app/cubit/app_cubit.dart';
-import 'package:boringbookkeepingbusiness/widgets/widgets.dart';
+import 'package:boringbookkeepingbusiness/widgets/btns.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class NavBar extends StatelessWidget {
-  const NavBar({super.key, required this.children});
+class MobileNavBar extends StatelessWidget {
+  const MobileNavBar({required this.child, super.key});
 
-  final List<Widget> children;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
     final current = context.read<AppCubit>().state;
+
     return Scaffold(
-      body: CustomScrollView(
-        physics: const BouncingScrollPhysics(),
-        slivers: <Widget>[
-          SliverAppBar(
-            flexibleSpace: FlexibleSpaceBar(
-              expandedTitleScale: 1,
-              title: Container(
-                alignment: Alignment.bottomLeft,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 128, top: 16),
-                  child: InkWell(
-                    onTap: () {
-                      context.read<AppCubit>().setLanding();
-                    },
-                    child: Image.asset('alt_icon.png', fit: BoxFit.cover),
-                  ),
-                ),
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: const Color.fromRGBO(1, 15, 48, 1),
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset('icon.png'),
+        ),
+        leadingWidth: 120,
+      ),
+      endDrawer: Drawer(
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 36, 73, 222),
               ),
+              child: Text('Drawer Header'),
             ),
-            expandedHeight: 130,
-            pinned: true,
-            backgroundColor: const Color.fromRGBO(1, 15, 48, 1),
-            toolbarHeight: 100,
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                _NavElement(
-                  name: 'Home',
-                  selected: current == AppState.landing ? true : false,
-                  link: 'link',
-                  onPressed: () {
-                    context.read<AppCubit>().setLanding();
-                  },
-                ),
-                _NavElement(
-                  name: 'Services',
-                  selected: current == AppState.services ? true : false,
-                  link: 'link',
-                  onPressed: () {
-                    context.read<AppCubit>().setServices();
-                  },
-                ),
-              ],
+            ListTile(
+              title: const Text('Landing'),
+              selected: current == AppState.landing,
+              onTap: () {
+                // Update the state of the app
+                context.read<AppCubit>().setLanding();
+                // Then close the drawer
+                Navigator.pop(context);
+              },
             ),
-            actions: const [
-              MainBtn(title: 'Contact Us', link: ''),
-            ],
-          ),
-          SliverList(
-            delegate: SliverChildListDelegate(
-              [...children],
+            ListTile(
+              title: const Text('Services'),
+              selected: current == AppState.services,
+              onTap: () {
+                // Update the state of the app
+                context.read<AppCubit>().setServices();
+                // Then close the drawer
+                Navigator.pop(context);
+              },
             ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _NavElement extends StatelessWidget {
-  const _NavElement({
-    super.key,
-    required this.name,
-    required this.link,
-    this.onPressed,
-    required this.selected,
-  });
-
-  final String name;
-
-  final String link;
-  final VoidCallback? onPressed;
-  final bool selected;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: TextButton(
-        style: TextButton.styleFrom(
-          foregroundColor: Colors.white,
-          padding: const EdgeInsets.all(16.0),
-          textStyle: const TextStyle(fontSize: 20),
-        ),
-        onPressed: onPressed,
-        child: Text(
-          name,
-          style: Theme.of(context)
-              .textTheme
-              .displaySmall!
-              .copyWith(color: selected ? Colors.blue : Colors.white),
+          ],
         ),
       ),
+      body: child,
     );
   }
 }

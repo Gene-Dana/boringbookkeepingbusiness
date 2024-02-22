@@ -1,3 +1,4 @@
+import 'package:boringbookkeepingbusiness/widgets/mobile_nav_bar.dart';
 import 'package:boringbookkeepingbusiness/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,117 +13,120 @@ class MobileServicesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
+    return MobileNavBar(
+      child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 32),
-        child: ListView(
-          children: [
-            const _Opening(),
-            const _Second(),
-            _ServiceSection(
-              title: 'Essential Bookkeeping Services',
-              subtitle:
-                  'Providing the foundational financial support every business requires.',
-              icon: Image.asset('icon1.png'),
-              serviceList: _ServiceList(
-                color: Colors.blue,
-                services: [
-                  Services(
-                    service: 'Bank & Credit Card Transaction Coding',
-                    descript:
-                        'Accurate categorization of bank and credit card transactions to ensure your financials are always up to date.',
-                  ),
-                  Services(
-                    service: 'Monthly Financial Reports',
-                    descript:
-                        'Regular insights into your financial health with comprehensive reports.',
-                  ),
-                ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const _Opening(),
+              const _Second(),
+              _ServiceSection(
+                title: 'Essential Bookkeeping Services',
+                subtitle:
+                    'Providing the foundational financial support every business requires.',
+                icon: Image.asset('icon1.png'),
+                serviceList: _ServiceList(
+                  color: Colors.blue,
+                  services: [
+                    Services(
+                      service: 'Bank & Credit Card Transaction Coding',
+                      descript:
+                          'Accurate categorization of bank and credit card transactions to ensure your financials are always up to date.',
+                    ),
+                    Services(
+                      service: 'Monthly Financial Reports',
+                      descript:
+                          'Regular insights into your financial health with comprehensive reports.',
+                    ),
+                  ],
+                ),
               ),
-            ),
-            _ServiceSection(
-              title: 'Advanced Bookkeeping Services',
-              subtitle:
-                  'Elevate your financial operations with our expanded suite of services.',
-              icon: Image.asset('icon2.png'),
-              serviceList: _ServiceList(
-                color: Colors.pink,
-                services: [
-                  Services(
-                    service: 'Weekly Reporting',
-                    descript:
-                        'Gain more frequent insights with detailed weekly financial summaries.',
-                  ),
-                  Services(
-                    service: 'Statement Reconciliations',
-                    descript:
-                        'Ensuring all your financial statements match up perfectly with your records.',
-                  ),
-                  Services(
-                    service: 'Month-end Close',
-                    descript:
-                        'Systematic completion of all accounting tasks to close your books every month.',
-                  ),
-                  Services(
-                    service: 'Advisory Services',
-                    descript:
-                        'Strategic insights with Key Performance Indicators (KPIs) and in-depth management reporting.',
-                  ),
-                ],
+              _ServiceSection(
+                title: 'Advanced Bookkeeping Services',
+                subtitle:
+                    'Elevate your financial operations with our expanded suite of services.',
+                icon: Image.asset('icon2.png'),
+                serviceList: _ServiceList(
+                  color: Colors.pink,
+                  services: [
+                    Services(
+                      service: 'Weekly Reporting',
+                      descript:
+                          'Gain more frequent insights with detailed weekly financial summaries.',
+                    ),
+                    Services(
+                      service: 'Statement Reconciliations',
+                      descript:
+                          'Ensuring all your financial statements match up perfectly with your records.',
+                    ),
+                    Services(
+                      service: 'Month-end Close',
+                      descript:
+                          'Systematic completion of all accounting tasks to close your books every month.',
+                    ),
+                    Services(
+                      service: 'Advisory Services',
+                      descript:
+                          'Strategic insights with Key Performance Indicators (KPIs) and in-depth management reporting.',
+                    ),
+                  ],
+                ),
               ),
-            ),
-            _ServiceSection(
-              title: 'Complete Bookkeeping Services',
-              subtitle:
-                  'Our most comprehensive package for businesses seeking full financial management.',
-              icon: Image.asset('icon3.png'),
-              serviceList: _ServiceList(
-                color: Colors.yellow,
-                services: [
-                  Services(
-                    service: 'Cash Flow Forecasting',
-                    descript:
-                        'Project your companys cash flow to make informed business decisions.',
-                  ),
-                  Services(
-                    service: 'Payroll Processing',
-                    descript:
-                        'Timely and compliant payroll processing to ensure your team is paid correctly and on time.',
-                  ),
-                  Services(
-                    service: 'Job Costing',
-                    descript:
-                        'Detailed tracking and reporting on the costs associated with specific jobs or projects.',
-                  ),
-                  Services(
-                    service: 'Budgeting',
-                    descript:
-                        'Assistance in planning your financial budget to align with business goals.',
-                  ),
-                  Services(
-                    service: 'Systems Integration',
-                    descript:
-                        'Streamlining your accounting systems for maximum efficiency.',
-                  ),
-                  Services(
-                    service: 'Training',
-                    descript:
-                        'Equip your team with the knowledge to manage and understand your financial systems.',
-                  ),
-                  Services(
-                    service: 'Data Clean up & Catch Up',
-                    descript:
-                        'Address any backlogs in bookkeeping to bring your accounts up to date.',
-                  ),
-                ],
+              _ServiceSection(
+                title: 'Complete Bookkeeping Services',
+                subtitle:
+                    'Our most comprehensive package for businesses seeking full financial management.',
+                icon: Image.asset('icon3.png'),
+                serviceList: _ServiceList(
+                  color: Colors.yellow,
+                  services: [
+                    Services(
+                      service: 'Cash Flow Forecasting',
+                      descript:
+                          'Project your companys cash flow to make informed business decisions.',
+                    ),
+                    Services(
+                      service: 'Payroll Processing',
+                      descript:
+                          'Timely and compliant payroll processing to ensure your team is paid correctly and on time.',
+                    ),
+                    Services(
+                      service: 'Job Costing',
+                      descript:
+                          'Detailed tracking and reporting on the costs associated with specific jobs or projects.',
+                    ),
+                    Services(
+                      service: 'Budgeting',
+                      descript:
+                          'Assistance in planning your financial budget to align with business goals.',
+                    ),
+                    Services(
+                      service: 'Systems Integration',
+                      descript:
+                          'Streamlining your accounting systems for maximum efficiency.',
+                    ),
+                    Services(
+                      service: 'Training',
+                      descript:
+                          'Equip your team with the knowledge to manage and understand your financial systems.',
+                    ),
+                    Services(
+                      service: 'Data Clean up & Catch Up',
+                      descript:
+                          'Address any backlogs in bookkeeping to bring your accounts up to date.',
+                    ),
+                  ],
+                ),
               ),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 24.0),
-              child: Text(
-                  'For more detailed information on our service packages, please contact Ryan@Web-TaxPro.com or call us at (971) 708-2045.'),
-            )
-          ],
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 24.0),
+                child: Text(
+                    'For more detailed information on our service packages, please contact Ryan@Web-TaxPro.com or call us at (971) 708-2045.'),
+              )
+            ],
+          ),
         ),
       ),
     );
