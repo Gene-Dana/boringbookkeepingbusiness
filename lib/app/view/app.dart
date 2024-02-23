@@ -25,7 +25,7 @@ class App extends StatelessWidget {
         useMaterial3: true,
         textTheme: TextTheme(
           displayLarge: GoogleFonts.archivoBlack(
-            fontSize: 100,
+            fontSize: 80,
             color: Colors.white,
             fontWeight: FontWeight.w100,
           ),
