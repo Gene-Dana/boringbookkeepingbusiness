@@ -4,7 +4,7 @@ import 'package:equatable/equatable.dart';
 enum AppState { landing, services }
 
 class AppCubit extends Cubit<AppState> {
-  AppCubit() : super(AppState.services);
+  AppCubit() : super(AppState.landing);
 
   void setLanding() {
     emit(AppState.landing);
