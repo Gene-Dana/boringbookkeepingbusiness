@@ -27,7 +27,9 @@ class MainBtn extends StatelessWidget {
             onPressed: () {},
             child: Text(
               title,
-              style: Theme.of(context).textTheme.displaySmall,
+              style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                    height: 1.1,
+                  ),
             ),
           ),
         ),
@@ -65,7 +67,7 @@ class mMainBtn extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .displaySmall!
-                    .copyWith(fontSize: 14)),
+                    .copyWith(fontSize: 14, height: 1.1)),
           ),
         ),
       ),
@@ -100,7 +102,10 @@ class SecondaryBtn extends StatelessWidget {
             onPressed: () {},
             child: Text(
               title,
-              style: Theme.of(context).textTheme.displaySmall,
+              style: Theme.of(context)
+                  .textTheme
+                  .displaySmall
+                  ?.copyWith(height: 1.1),
             ),
           ),
         ),
@@ -131,7 +136,9 @@ class mSecondaryBtn extends StatelessWidget {
               side:
                   BorderSide(color: Color.fromARGB(255, 36, 73, 222), width: 2),
               padding: const EdgeInsets.all(16.0),
-              textStyle: const TextStyle(fontSize: 20),
+              textStyle: const TextStyle(
+                fontSize: 20,
+              ),
             ),
             onPressed: () {},
             child: Text(
@@ -139,7 +146,7 @@ class mSecondaryBtn extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .displaySmall!
-                  .copyWith(fontSize: 14),
+                  .copyWith(fontSize: 14, height: 1.1),
             ),
           ),
         ),
