@@ -48,11 +48,12 @@ class Opening extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(8),
-                          child: InkWell(
-                              onTap: () =>
-                                  context.read<AppCubit>().setServices(),
-                              child: const MainBtn(
-                                  title: 'Our Services', link: '')),
+                          child: MainBtn(
+                            title: 'Our Services',
+                            link: '',
+                            onPressed: () =>
+                                context.read<AppCubit>().setServices(),
+                          ),
                         ),
                         const Padding(
                           padding: EdgeInsets.all(8),

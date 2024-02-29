@@ -19,8 +19,9 @@ class MobileNavBar extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: InkWell(
-              onTap: () => context.read<AppCubit>().setServices(),
-              child: Image.asset('icon.png')),
+            onTap: () => context.read<AppCubit>().setServices(),
+            child: Image.asset('icon.png'),
+          ),
         ),
         leadingWidth: 120,
       ),

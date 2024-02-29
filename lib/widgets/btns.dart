@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MainBtn extends StatelessWidget {
   const MainBtn(
       {super.key, required this.title, required this.link, this.onPressed});
 
   final String title;
-  final String link;
+  final String? link;
   final VoidCallback? onPressed;
+
+  void _launchUrl(String _url) async {
+    final Uri uri = Uri.parse(_url);
+    if (!await launchUrl(uri)) {
+      throw 'Could not launch $_url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +32,7 @@ class MainBtn extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               textStyle: const TextStyle(fontSize: 20),
             ),
-            onPressed: () {},
+            onPressed: link != null ? () => _launchUrl(link!) : onPressed,
             child: Text(
               title,
               style: Theme.of(context).textTheme.displaySmall?.copyWith(
@@ -46,6 +54,13 @@ class mMainBtn extends StatelessWidget {
   final String link;
   final VoidCallback? onPressed;
 
+  void _launchUrl(String _url) async {
+    final Uri uri = Uri.parse(_url);
+    if (!await launchUrl(uri)) {
+      throw 'Could not launch $_url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -62,7 +77,7 @@ class mMainBtn extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               textStyle: const TextStyle(fontSize: 12),
             ),
-            onPressed: onPressed,
+            onPressed: link != null ? () => _launchUrl(link) : onPressed,
             child: Text(title,
                 style: Theme.of(context)
                     .textTheme
@@ -80,6 +95,13 @@ class SecondaryBtn extends StatelessWidget {
 
   final String title;
   final String link;
+
+  void _launchUrl(String _url) async {
+    final Uri uri = Uri.parse(_url);
+    if (!await launchUrl(uri)) {
+      throw 'Could not launch $_url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +121,7 @@ class SecondaryBtn extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               textStyle: const TextStyle(fontSize: 20),
             ),
-            onPressed: () {},
+            onPressed: () => _launchUrl(link),
             child: Text(
               title,
               style: Theme.of(context)
@@ -119,6 +141,13 @@ class mSecondaryBtn extends StatelessWidget {
 
   final String title;
   final String link;
+
+  void _launchUrl(String _url) async {
+    final Uri uri = Uri.parse(_url);
+    if (!await launchUrl(uri)) {
+      throw 'Could not launch $_url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -140,7 +169,7 @@ class mSecondaryBtn extends StatelessWidget {
                 fontSize: 20,
               ),
             ),
-            onPressed: () {},
+            onPressed: () => _launchUrl(link),
             child: Text(
               title,
               style: Theme.of(context)
@@ -153,4 +182,8 @@ class mSecondaryBtn extends StatelessWidget {
       ),
     );
   }
+}
+
+void _launchUrl(String _url) {
+  launchUrl(Uri(path: _url));
 }
