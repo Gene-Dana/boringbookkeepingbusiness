@@ -18,7 +18,9 @@ class MobileNavBar extends StatelessWidget {
         backgroundColor: const Color.fromRGBO(1, 15, 48, 1),
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Image.asset('icon.png'),
+          child: InkWell(
+              onTap: () => context.read<AppCubit>().setServices(),
+              child: Image.asset('icon.png')),
         ),
         leadingWidth: 120,
       ),
