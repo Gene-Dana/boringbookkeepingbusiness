@@ -23,37 +23,52 @@ class MobileNavBar extends StatelessWidget {
         leadingWidth: 120,
       ),
       endDrawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 36, 73, 222),
+        child: Center(
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 36, 73, 222),
+                ),
+                //put image
+                child: Image.asset('icon.png'),
               ),
-              child: Text('Drawer Header'),
-            ),
-            ListTile(
-              title: const Text('Landing'),
-              selected: current == AppState.landing,
-              onTap: () {
-                // Update the state of the app
-                context.read<AppCubit>().setLanding();
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: const Text('Services'),
-              selected: current == AppState.services,
-              onTap: () {
-                // Update the state of the app
-                context.read<AppCubit>().setServices();
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-          ],
+              ListTile(
+                title: const Text('Home Page'),
+                selected: current == AppState.landing,
+                onTap: () {
+                  // Update the state of the app
+                  context.read<AppCubit>().setLanding();
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text('Services Page'),
+                selected: current == AppState.services,
+                onTap: () {
+                  // Update the state of the app
+                  context.read<AppCubit>().setServices();
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: mMainBtn(
+                    title: 'Contact Us',
+                    link: 'https://calendly.com/boringbooks'),
+                selected: current == AppState.services,
+                onTap: () {
+                  // Update the state of the app
+                  context.read<AppCubit>().setServices();
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
         ),
       ),
       body: child,

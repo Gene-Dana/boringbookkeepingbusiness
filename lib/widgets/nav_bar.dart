@@ -57,7 +57,9 @@ class NavBar extends StatelessWidget {
               ],
             ),
             actions: const [
-              MainBtn(title: 'Contact Us', link: ''),
+              MainBtn(
+                  title: 'Contact Us',
+                  link: 'https://calendly.com/boringbooks'),
             ],
           ),
           SliverList(

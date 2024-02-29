@@ -1,5 +1,7 @@
+import 'package:boringbookkeepingbusiness/app/cubit/app_cubit.dart';
 import 'package:boringbookkeepingbusiness/widgets/btns.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Opening extends StatelessWidget {
   const Opening({super.key});
@@ -38,19 +40,25 @@ class Opening extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(24),
+                Padding(
+                  padding: const EdgeInsets.all(24),
                   child: SizedBox(
                     width: 700,
                     child: Row(
                       children: [
                         Padding(
-                          padding: EdgeInsets.all(8),
-                          child: MainBtn(title: 'Our Services', link: ''),
+                          padding: const EdgeInsets.all(8),
+                          child: InkWell(
+                              onTap: () =>
+                                  context.read<AppCubit>().setServices(),
+                              child: const MainBtn(
+                                  title: 'Our Services', link: '')),
                         ),
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.all(8),
-                          child: SecondaryBtn(title: 'Contact Us', link: ''),
+                          child: SecondaryBtn(
+                              title: 'Contact Us',
+                              link: 'https://calendly.com/boringbooks'),
                         ),
                       ],
                     ),

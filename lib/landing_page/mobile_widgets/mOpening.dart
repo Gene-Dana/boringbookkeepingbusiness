@@ -1,5 +1,7 @@
+import 'package:boringbookkeepingbusiness/app/cubit/app_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:boringbookkeepingbusiness/widgets/btns.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class mOpening extends StatelessWidget {
   const mOpening({super.key});
@@ -12,17 +14,17 @@ class mOpening extends StatelessWidget {
         child: Stack(
           children: [
             Positioned.fill(
-                top: 500.0,
-                right: -100.0,
+                top: 500,
+                right: -100,
                 child: Image.asset('assets/abstract.png',
                     width: MediaQuery.of(context).size.width - 100)),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(24.0),
+                    padding: const EdgeInsets.all(24),
                     child: Text('Saving you time for what you do best',
                         style: Theme.of(context)
                             .textTheme
@@ -30,7 +32,7 @@ class mOpening extends StatelessWidget {
                             .copyWith(fontSize: 48)),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(24.0),
+                    padding: const EdgeInsets.all(24),
                     child: SizedBox(
                       width: 850,
                       child: Text(
@@ -42,14 +44,20 @@ class mOpening extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(24.0),
+                  Padding(
+                    padding: const EdgeInsets.all(24),
                     child: SizedBox(
                       width: 700,
                       child: Row(
                         children: [
-                          mMainBtn(title: 'Our Services', link: ''),
-                          mSecondaryBtn(title: 'Contact Us', link: '')
+                          InkWell(
+                            onTap: () => context.read<AppCubit>().setServices(),
+                            child:
+                                const mMainBtn(title: 'Our Services', link: ''),
+                          ),
+                          const mSecondaryBtn(
+                              title: 'Contact Us',
+                              link: 'https://calendly.com/boringbooks')
                         ],
                       ),
                     ),
