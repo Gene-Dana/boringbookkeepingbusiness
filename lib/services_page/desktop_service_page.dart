@@ -27,7 +27,7 @@ class DesktopServicesPage extends StatelessWidget {
     return NavBar(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 32),
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 128),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
