@@ -52,8 +52,11 @@ class mOpening extends StatelessWidget {
                         children: [
                           InkWell(
                             onTap: () => context.read<AppCubit>().setServices(),
-                            child:
-                                const mMainBtn(title: 'Our Services', link: ''),
+                            child: mMainBtn(
+                              title: 'Our Services',
+                              onPressed: () =>
+                                  context.read<AppCubit>().setServices(),
+                            ),
                           ),
                           const mSecondaryBtn(
                               title: 'Contact Us',

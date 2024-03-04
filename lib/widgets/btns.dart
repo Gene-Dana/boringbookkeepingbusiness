@@ -46,11 +46,10 @@ class MainBtn extends StatelessWidget {
 }
 
 class mMainBtn extends StatelessWidget {
-  const mMainBtn(
-      {required this.title, required this.link, super.key, this.onPressed});
+  const mMainBtn({required this.title, this.link, super.key, this.onPressed});
 
   final String title;
-  final String link;
+  final String? link;
   final VoidCallback? onPressed;
 
   void _launchUrl(String _url) async {
