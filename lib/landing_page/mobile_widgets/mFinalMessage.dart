@@ -52,7 +52,6 @@ class mFinalMessage extends StatelessWidget {
                         padding: EdgeInsets.all(8.0),
                         child: mMainBtn(
                           title: 'Explore Our Services',
-                          link: '',
                           onPressed: () =>
                               context.read<AppCubit>().setServices(),
                         ),
