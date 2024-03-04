@@ -148,7 +148,7 @@ class _Opening extends StatelessWidget {
             'Our Services & Expertise',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   // Adjust font size dynamically based on screen width
-                  fontSize: size.width * 0.07, // Example dynamic scaling
+                  fontSize: 18, // Example dynamic scaling
                   color: const Color.fromARGB(255, 36, 73, 222),
                   fontWeight: FontWeight.bold,
                 ),
@@ -161,7 +161,7 @@ class _Opening extends StatelessWidget {
             // Further dynamic scaling for larger text
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   color: Colors.black,
-                  fontSize: 12,
+                  fontSize: 32,
                 ), // Larger text scaled dynamically
           ),
         ),
