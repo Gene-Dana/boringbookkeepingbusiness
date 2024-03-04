@@ -1,10 +1,7 @@
+import 'package:boringbookkeepingbusiness/widgets/btns.dart';
 import 'package:boringbookkeepingbusiness/widgets/mobile_nav_bar.dart';
 import 'package:boringbookkeepingbusiness/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:boringbookkeepingbusiness/widgets/btns.dart';
-import 'package:boringbookkeepingbusiness/app/cubit/app_cubit.dart';
 
 class MobileServicesPage extends StatelessWidget {
   const MobileServicesPage({super.key});
