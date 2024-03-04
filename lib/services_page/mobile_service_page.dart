@@ -167,7 +167,8 @@ class _Opening extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(16.0),
-          child: mMainBtn(title: 'Get Started', link: ''),
+          child: mMainBtn(
+              title: 'Get Started', link: 'https://calendly.com/boringbooks'),
           // You may also consider adjusting button sizes if necessary
         )
       ],
