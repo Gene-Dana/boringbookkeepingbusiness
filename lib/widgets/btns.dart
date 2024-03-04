@@ -75,7 +75,7 @@ class mMainBtn extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               textStyle: const TextStyle(fontSize: 12),
             ),
-            onPressed: link != null ? () => _launchUrl(link) : onPressed,
+            onPressed: link != null ? () => _launchUrl(link!) : onPressed,
             child: Text(title,
                 style: Theme.of(context)
                     .textTheme

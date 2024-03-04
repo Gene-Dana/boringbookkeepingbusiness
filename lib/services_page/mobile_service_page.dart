@@ -160,8 +160,9 @@ class _Opening extends StatelessWidget {
             'Financial & Bookkeeping Services ',
             // Further dynamic scaling for larger text
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: Colors.black,
-                fontSize: size.width * 0.15), // Larger text scaled dynamically
+                  color: Colors.black,
+                  fontSize: 12,
+                ), // Larger text scaled dynamically
           ),
         ),
         Padding(
