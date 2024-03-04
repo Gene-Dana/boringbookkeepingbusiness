@@ -21,7 +21,7 @@ class NavBar extends StatelessWidget {
               title: Container(
                 alignment: Alignment.bottomLeft,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 128, top: 16),
+                  padding: const EdgeInsets.only(left: 80, top: 16),
                   child: InkWell(
                     onTap: () {
                       context.read<AppCubit>().setLanding();
