@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MainBtn extends StatelessWidget {
-  const MainBtn(
-      {super.key, required this.title, required this.link, this.onPressed});
+  const MainBtn({required this.title, super.key, this.link, this.onPressed});
 
   final String title;
   final String? link;
@@ -48,7 +47,7 @@ class MainBtn extends StatelessWidget {
 
 class mMainBtn extends StatelessWidget {
   const mMainBtn(
-      {super.key, required this.title, required this.link, this.onPressed});
+      {required this.title, required this.link, super.key, this.onPressed});
 
   final String title;
   final String link;
@@ -91,7 +90,7 @@ class mMainBtn extends StatelessWidget {
 }
 
 class SecondaryBtn extends StatelessWidget {
-  const SecondaryBtn({super.key, required this.title, required this.link});
+  const SecondaryBtn({required this.title, required this.link, super.key});
 
   final String title;
   final String link;
@@ -137,7 +136,7 @@ class SecondaryBtn extends StatelessWidget {
 }
 
 class mSecondaryBtn extends StatelessWidget {
-  const mSecondaryBtn({super.key, required this.title, required this.link});
+  const mSecondaryBtn({required this.title, required this.link, super.key});
 
   final String title;
   final String link;

@@ -50,7 +50,6 @@ class Opening extends StatelessWidget {
                           padding: const EdgeInsets.all(8),
                           child: MainBtn(
                             title: 'Our Services',
-                            link: '',
                             onPressed: () =>
                                 context.read<AppCubit>().setServices(),
                           ),
