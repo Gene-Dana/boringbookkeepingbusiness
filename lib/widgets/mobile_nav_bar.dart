@@ -17,13 +17,13 @@ class MobileNavBar extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.white),
         backgroundColor: const Color.fromRGBO(1, 15, 48, 1),
         leading: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(left: 28, top: 8),
           child: InkWell(
             onTap: () => context.read<AppCubit>().setServices(),
             child: Image.asset('icon.png'),
           ),
         ),
-        leadingWidth: 120,
+        leadingWidth: 170,
       ),
       endDrawer: Drawer(
         child: Center(
