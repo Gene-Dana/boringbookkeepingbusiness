@@ -57,9 +57,6 @@ class Footer extends StatelessWidget {
                   children: [
                     FooterElement(name: 'Services', link: 'link'),
                     FooterElement(name: 'Our Work', link: 'link'),
-                    FooterElement(name: 'Solution', link: 'link'),
-                    FooterElement(name: 'Blog', link: 'link'),
-                    FooterElement(name: 'Solution', link: 'link'),
                   ],
                 )
               ],
