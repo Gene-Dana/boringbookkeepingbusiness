@@ -72,15 +72,10 @@ class mMainBtn extends StatelessWidget {
             style: TextButton.styleFrom(
               backgroundColor: Color.fromARGB(255, 36, 73, 222),
               foregroundColor: Colors.white,
-              padding: const EdgeInsets.all(16.0),
-              textStyle: const TextStyle(fontSize: 12),
             ),
             onPressed: link != null ? () => _launchUrl(link!) : onPressed,
             child: Text(title,
-                style: Theme.of(context)
-                    .textTheme
-                    .displaySmall!
-                    .copyWith(fontSize: 14, height: 1.1)),
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
           ),
         ),
       ),
@@ -156,8 +151,8 @@ class mSecondaryBtn extends StatelessWidget {
         height: 40,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(100),
-          child: OutlinedButton(
-            style: OutlinedButton.styleFrom(
+          child: TextButton(
+            style: TextButton.styleFrom(
               foregroundColor: Colors.white,
               surfaceTintColor: Colors.black,
               side:
@@ -170,10 +165,7 @@ class mSecondaryBtn extends StatelessWidget {
             onPressed: () => _launchUrl(link),
             child: Text(
               title,
-              style: Theme.of(context)
-                  .textTheme
-                  .displaySmall!
-                  .copyWith(fontSize: 14, height: 1.1),
+              style: TextStyle(fontSize: 14),
             ),
           ),
         ),
