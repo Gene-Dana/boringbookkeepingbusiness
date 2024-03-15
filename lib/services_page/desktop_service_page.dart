@@ -184,7 +184,7 @@ class _Opening extends StatelessWidget {
               'Our Services & Expertise',
               style: Theme.of(context).textTheme.displayLarge!.copyWith(
                     // Adjust font size dynamically based on screen width
-                    fontSize: 24,
+                    fontSize: 32,
                     color: const Color.fromARGB(255, 36, 73, 222),
                     // fontWeight: FontWeight.bold,
                   ),
