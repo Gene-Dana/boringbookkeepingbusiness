@@ -25,11 +25,13 @@ class mOpening extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(24),
-                    child: Text('Saving you time for what you do best',
-                        style: Theme.of(context)
-                            .textTheme
-                            .displayLarge!
-                            .copyWith(fontSize: 48)),
+                    child: Text(
+                      'Saving you time for what you do best',
+                      style: Theme.of(context)
+                          .textTheme
+                          .displayLarge!
+                          .copyWith(fontSize: 32),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(24),
