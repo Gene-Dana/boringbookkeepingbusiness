@@ -158,9 +158,6 @@ class mSecondaryBtn extends StatelessWidget {
               side:
                   BorderSide(color: Color.fromARGB(255, 36, 73, 222), width: 2),
               padding: const EdgeInsets.all(16.0),
-              textStyle: const TextStyle(
-                fontSize: 20,
-              ),
             ),
             onPressed: () => _launchUrl(link),
             child: Text(
