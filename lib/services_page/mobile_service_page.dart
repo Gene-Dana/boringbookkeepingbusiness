@@ -229,7 +229,7 @@ class _Second extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: Image.network(
-                    'https://media.discordapp.net/attachments/1209912491736301670/1217172794282999849/IMG_8212.png?ex=66030f80&is=65f09a80&hm=a62ea57465b4db4016667ea6f17f263cbeb2c8e890e5426f6adb28fc294b9d17&=&format=webp&quality=lossless&width=1066&height=1066',
+                    'https://imgur.com/UXFRJSs',
                     fit: BoxFit.cover,
                     width: screenWidth * (0.4),
                     height: screenWidth * (0.4),
