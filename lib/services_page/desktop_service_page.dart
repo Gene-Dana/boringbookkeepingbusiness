@@ -277,8 +277,8 @@ class _Second extends StatelessWidget {
                         padding: const EdgeInsets.all(8),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image.network(
-                            'https://imgur.com/UXFRJSs',
+                          child: Image.asset(
+                            'assets/ryanfam.jpeg',
                             fit: BoxFit.cover,
                             width: 300,
                             height: 200,
