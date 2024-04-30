@@ -120,7 +120,7 @@ class MobileServicesPage extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 24.0),
                 child: Text(
-                    'For more detailed information on our service packages, please contact ryan@boringbookkeepingbusiness.com or call us at +1(971)979-2028.'),
+                    'For more detailed information on our service packages, please contact ryan@boringbookkeepingbusiness.com or call us at +1(971) 979-2028.'),
               )
             ],
           ),

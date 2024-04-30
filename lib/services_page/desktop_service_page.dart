@@ -155,7 +155,7 @@ class DesktopServicesPage extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 24),
                 child: Text(
-                  'For more detailed information on our service packages please contact ryan@boringbookkeepingbusiness.com or call us at (971) 708-2045.',
+                  'For more detailed information on our service packages please contact ryan@boringbookkeepingbusiness.com or call us at (971) 979-2028.',
                 ),
               ),
             ],
