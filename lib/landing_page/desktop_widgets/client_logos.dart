@@ -7,7 +7,9 @@ class ClientLogos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         height: 300,
-        color: .fromColorARGB(255, 36, 73, 222),
+        color: const Color(
+          0x000000ff,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
